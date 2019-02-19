@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <delete id="product.product_category_all" model="product.category"/>
+        <delete id="product.product_category_1" model="product.category"/>
+
+        <record id="all" model="product.category">
+            <field name="name">Tất cả</field>
+        </record>
+
+        <record id="trade" model="product.category">
+            <field name="parent_id" ref="all"/>
+            <field name="name">Thương mại</field>
+        </record>
+
+        <record id="manufacturing" model="product.category">
+            <field name="parent_id" ref="all"/>
+            <field name="name">Sản xuất - Xây dựng</field>
+        </record>
+
+        <record id="farming" model="product.category">
+            <field name="parent_id" ref="all"/>
+            <field name="name">Nông nghiệp</field>
+        </record>
+
+        <record id="entertaining" model="product.category">
+            <field name="parent_id" ref="all"/>
+            <field name="name">Giải trí - Nhà hàng - Khách sạn</field>
+        </record>
+
+        <record id="service" model="product.category">
+            <field name="parent_id" ref="all"/>
+            <field name="name">Dịch vụ</field>
+        </record>
+
+        <record id="health" model="product.category">
+            <field name="parent_id" ref="all"/>
+            <field name="name">Chăm sóc sức khoẻ</field>
+        </record>
+
+        <record id="other" model="product.category">
+            <field name="parent_id" ref="all"/>
+            <field name="name">Chuyên biệt khác</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="el01-bansi" model="product.template">
+            <field name="name">Phần mềm phân phối - bán sỉ</field>
+            <field name="purchase_ok">False</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="etg_website.trade"/>
+            <field name="website_published">True</field>
+            <field name="default_code">el01-bansi</field>
+        </record>
+
+        <record id="el03-cntt" model="product.template">
+            <field name="name">Phần mềm quản lý công ty công nghệ thông tin</field>
+            <field name="purchase_ok">False</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="etg_website.manufacturing"/>
+            <field name="website_published">True</field>
+            <field name="default_code">el03-cntt</field>
+        </record>
+
+    </data>
+</odoo>
