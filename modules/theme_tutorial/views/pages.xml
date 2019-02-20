@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- === Services Page === -->
+    <template id="services_page_template">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img alt="client" class="img-circle" src="/theme_tutorial/static/uploads/test.jpg"/>
+                            <h3>Title</h3>
+                            <p>Cập nhật mô tả Title.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h1>Our Services</h1>
+                    <ul class="services">
+                        <li>Cloud Hosting</li>
+                        <li>Support</li>
+                        <li>Unlimited space</li>
+                    </ul>
+
+                    <!-- === Snippets' area === -->
+                    <div class="oe_structure"/>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <record id="services_page" model="website.page">
+        <field name="name">Services page</field>
+        <field name="website_published">True</field>
+        <field name="url">/services</field>
+        <field name="view_id" ref="services_page_template"/>
+        <field name="type">qweb</field>
+        <field name="key">theme_tutorial.services_page</field>
+    </record>
+
+    <record id="services_page_link" model="website.menu">
+        <field name="name">Services</field>
+        <field name="page_id" ref="services_page"/>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">99</field>
+    </record>
+
+</odoo>
